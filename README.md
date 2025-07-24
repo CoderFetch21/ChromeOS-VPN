@@ -45,3 +45,15 @@ fi
 
 14. To test that it is working paste in this
 cat /tmp/vpn_autostart.log
+
+# Tips & Notes
+You can customize the VPN config by replacing dummy.ovpn with your own .ovpn file.
+
+Make sure VPN.py uses shutil.which("openvpn") to dynamically find the binary (already done).
+
+Logs are stored at /tmp/vpn_autostart.log for debugging VPN launch behavior.
+
+For legacy devices, a delay (sleep 10) before autostart helps ensure the Linux container is ready.
+
+You can verify that your tunnel is active by running:
+ps aux | grep openvpn
