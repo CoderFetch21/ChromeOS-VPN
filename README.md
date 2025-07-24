@@ -10,7 +10,7 @@ This is a simple VPN for ChromeOS and ChromeOS Flex to install this you will nee
 4. You will finally need this github repository
 
 # How to setup VPN
-1. Download this GitHub repository as a ZIP. Click the green Code button above → select Download ZIP
+1. Download this GitHub repository as a ZIP. Click the green Code button above → select Download ZIP There will be 2 folder that show up, the vpn and autostart you can remove the autostart folder
 
 2. Move the ZIP file into your Linux container. Open the ChromeOS Files app → Right-click the ZIP → Select Move to Linux
 
