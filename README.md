@@ -10,4 +10,3 @@ This is a simple VPN for ChromeOS and ChromeOS Flex to install this you will nee
 4. You will finally need this github repository
 
 # How to setup VPN
-
