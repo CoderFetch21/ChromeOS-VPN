@@ -1,13 +1,5 @@
 import subprocess
 import os
-import shutil
-
-# Locate the openvpn binary dynamically
-openvpn_path = shutil.which("openvpn")
-
-if openvpn_path is None:
-    print("Error: openvpn not found. Is it installed?")
-    exit(1)
 
 class SimpleVPN:
     """
@@ -27,7 +19,7 @@ class SimpleVPN:
         if not os.path.isfile(self.config_path) or not self.config_path.endswith(".ovpn"):
             print("Invalid config file. Please provide a valid .ovpn file.")
             return
-        cmd = [openvpn_path, "--config", self.config_path]
+        cmd = ["/usr/sbin/openvpn", "--config", self.config_path]
         try:
             with open(self.log_file, "w") as log:
                 process = subprocess.Popen(cmd, stdout=log, stderr=log, text=True)
