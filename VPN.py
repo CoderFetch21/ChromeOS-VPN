@@ -27,7 +27,7 @@ class SimpleVPN:
         if not os.path.isfile(self.config_path) or not self.config_path.endswith(".ovpn"):
             print("Invalid config file. Please provide a valid .ovpn file.")
             return
-        cmd = [openvpn_path, "--config", config_path]
+        cmd = [openvpn_path, "--config", self.config_path]
         try:
             with open(self.log_file, "w") as log:
                 process = subprocess.Popen(cmd, stdout=log, stderr=log, text=True)
