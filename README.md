@@ -31,14 +31,13 @@ sudo apt install openvpn
 9. Add a new entry in the extension and select developer mode and paste in sleep 10 && bash ~/ChromeOS-VPN/autostart_test.sh
 
 10. Save that entry and configure a bash profile using:
-cp .bash_profile.sample ~/.bash_profile
 nano ~/.bash_profile
 or
 vim ~/.bash_profile
 
 12. Paste in this:
 if [ ! -f /tmp/vpn_autostart.log ]; then
-    python3 ~/Code/VPN.py start ~/Code/dummy.ovpn >> /tmp/vpn_autostart.log 2>&1
+    python3 ~/ChromeOS-VPN/VPN.py start ~/ChromeOS-VPN/dummy.ovpn >> /tmp/vpn_autostart.log 2>&1
 fi
 
 13. Restart your computer
