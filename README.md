@@ -26,11 +26,13 @@ sudo apt install openvpn
 
 7. Add the autostart to extensions
 
-8. Use this command to turn it on bash ~/ChromeOS-VPN/autostart_test.sh
+8. Make autostart_test.sh and VPN.py are excutible and if not make them excutible
 
-9. Add a new entry in the extension and select developer mode and paste in sleep 10 && bash ~/ChromeOS-VPN/autostart_test.sh
+9. Use this command to turn it on bash ~/ChromeOS-VPN/autostart_test.sh
 
-10. Save that entry and configure a bash profile using:
+10. Add a new entry in the extension and select developer mode and paste in sleep 10 && bash ~/ChromeOS-VPN/autostart_test.sh
+
+11. Save that entry and configure a bash profile using:
 nano ~/.bash_profile
 or
 vim ~/.bash_profile
